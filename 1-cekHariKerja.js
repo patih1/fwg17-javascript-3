@@ -15,6 +15,9 @@ const cekHariKerja = (day) => {
 }
 
 cekHariKerja('senin').then((value)=>console.log(value)).catch((eror)=>console.log(eror.message))
+// then adalah method dari promise. then memiliki parameter yang akan mereturn value resolve dalam promise
+// catch juga merupakan method dari promise. catch berisi parameter yang akan mereturn value reject dalam promise
+
 
 async function hari(str){
   try{
@@ -23,7 +26,11 @@ async function hari(str){
   }catch (eror) {
     console.log(eror.message)
   }
-
 }
 
+//try...catch terdiri dari block try & catch (& finaly jika dibutuhkan).
+//data akan dijalankan try terlebih dahulu, jika terdapat pengecualian, maka block catch akan dijalankan
+
 hari('senin')
+
+
