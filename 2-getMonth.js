@@ -12,16 +12,19 @@ const getMonth = (callback) => {
   }, 4000)
 }
 
-async function show (){
-  try{
-    console.log(value)
-  }catch (eror) {
-    console.log(eror.message)
+// async function show (){
+//   try{
+//     console.log(value)
+//   }catch (eror) {
+//     console.log(eror.message)
+//   }
+// }
+
+function showMonth(a, b){
+  console.log(b)
+  if(a){
+    console.log(a.message)
   }
 }
 
-function printOut(a, b){
-  console.log(a, b)
-}
-
-getMonth(printOut)
+getMonth(showMonth)
