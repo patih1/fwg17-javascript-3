@@ -14,7 +14,8 @@ const cekHariKerja = (day) => {
   })
 }
 
-cekHariKerja('senin').then((value)=>console.log(value)).catch((eror)=>console.log(eror.message))
+cekHariKerja('senin').then((value)=>console.log(`${value} adalah hari kerja`)).catch((eror)=>console.log(eror.message))
+cekHariKerja('sabtu').then((value)=>console.log(`${value} adalah hari kerja`)).catch((eror)=>console.log(eror.message))
 // then adalah method dari promise. then memiliki parameter yang akan mereturn value resolve dalam promise
 // catch juga merupakan method dari promise. catch berisi parameter yang akan mereturn value reject dalam promise
 
@@ -22,7 +23,7 @@ cekHariKerja('senin').then((value)=>console.log(value)).catch((eror)=>console.lo
 async function hari(str){
   try{
     x = await cekHariKerja(str)
-    console.log(str)
+    console.log(`${x} adalah hari kerja`)
   }catch (eror) {
     console.log(eror.message)
   }
@@ -32,5 +33,6 @@ async function hari(str){
 //data akan dijalankan try terlebih dahulu, jika terdapat pengecualian, maka block catch akan dijalankan
 
 hari('senin')
+hari('minggu')
 
 

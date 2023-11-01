@@ -21,9 +21,11 @@ const getMonth = (callback) => {
 // }
 
 function showMonth(a, b){
-  console.log(b)
+  
   if(a){
     console.log(a.message)
+  }else{
+    console.log(b.map(month => month))
   }
 }
 
